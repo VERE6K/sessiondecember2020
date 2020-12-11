@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int maximum= 0, counter= 0, max = 0, endcounter =0;
+	for (int i = 120115; i <= 120200; i++) {
+		for (int j = 1; j <= i; j++) {
+			if (i % j == 0) {
+				counter++;
+			}
+			if (endcounter <= counter) {
+				endcounter = counter;
+				maximum = i;
+			}
+		}
+		counter = 0;
+	}
+	cout << endcounter << ' ' << maximum;
+}
